@@ -2,7 +2,7 @@
 
 ## Background
 
-Struct of Arrays is an optimization where you store each field in its own contiguous array (can be as the struct's field, a global variable, or a local variable), which provides:
+**Struct of Arrays** is a data layout where you store each field in its own contiguous array (can be as the struct's field, a global variable, or a local variable), which provides:
 - Low memory usage since it eliminates per-element padding in a AoS layout, and instead, you only have padding for array fields in a SoA layout
 - Better cache locality
 - Good memory bandwidth utilization for batched code (i.e. if you have a loop that process several objects, but only accesses a few of the fields, then the SoA layout reduces the amount of data that needs to be loaded).
