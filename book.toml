@@ -1,0 +1,8 @@
+[book]
+authors = ["Simon Tran"]
+language = "en"
+src = "src"
+title = "systems-handbook"
+
+[output.html]
+mathjax-support = true
