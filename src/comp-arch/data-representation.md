@@ -11,7 +11,9 @@
 
 More formally, any \\(N\\)-digit decimal number can be expressed using positional notation as:
 
-\\((d_{N-1} \cdot 10^{N-1}) + (d_{N-2} \cdot 10^{N-2}) + \dots + (d_2 \cdot 10^2) + (d_1 \cdot 10^1) + (d_0 \cdot 10^0)\\)
+$$
+(d_{N-1} \cdot 10^{N-1}) + (d_{N-2} \cdot 10^{N-2}) + \dots + (d_2 \cdot 10^2) + (d_1 \cdot 10^1) + (d_0 \cdot 10^0)
+$$
 
 Decimal numbers are typically written without prefixes, though they may be denoted as \\(N_{10}\\) when clarification is needed.
 
@@ -79,7 +81,9 @@ Hexadecimal numbers are prefixed with `0x`.
 
 For a number with digits \\(d_{N-1}, d_{N-2}, \dots, d_1, d_0\\) in base \\(B\\), the converted number to base \\(C\\) is calculated using the following formula:
 
-\\((d_{N-1} \cdot B^{N-1}) + (d_{N-2} × B^{N-2}) + \dots + (d_1 × B^11) + (d_0 × B^0)\\)
+$$
+(d_{N-1} \cdot B^{N-1}) + (d_{N-2} \cdot B^{N-2}) + \dots + (d_1 \cdot B^11) + (d_0 \cdot B^0)
+$$
 
 ### Binary to Hexadecimal
 

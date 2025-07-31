@@ -1020,6 +1020,65 @@ Generating permutations, subsets, or combinations
 #### Template
 
 ```python
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        result = []
+
+        def backtrack(path):
+            if len(path) == len(nums):
+                result.append(path.copy())
+                return
+
+            for num in nums:
+                if num not in path:
+                    path.append(num)
+                    backtrack(path)
+                    path.pop()
+
+        backtrack([])
+
+        return result
+```
+
+```python
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        result = []
+
+        def backtrack(path, start):
+            if start > len(nums):
+                return
+
+            result.append(path.copy())
+
+            for i in range(start, len(nums)):
+                curr.append(nums[i])
+                backtrack(path, i + 1)
+                path.pop()
+
+        backtrack([], 0)
+
+        return result
+```
+
+```python
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        result = []
+
+        def backtrack(path, start):
+            if len(path) == k:
+                result.append(path.copy())
+                return
+
+            for num in range(start, n + 1):
+                path.append(num)
+                backtrack(path, num + 1)
+                path.pop()
+
+        backtrack([], 1)
+
+        return result
 ```
 
 ### Backtracking with pruning

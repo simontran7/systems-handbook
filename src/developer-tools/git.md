@@ -103,6 +103,12 @@ git pull <remote> <branch>
 
 Fetch and merge changes from `<branch>` on `<remote>` into the current branch.
 
+```
+git pull --rebase <remote> <branch>
+```
+
+Fetch changes from <remote> and replay your local commits on top of the remote commits, creating a linear history without merge commits.
+
 ## Viewing History
 
 ```
